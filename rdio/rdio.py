@@ -1282,6 +1282,8 @@ def derive_rdio_type_from_data(rdio_object):
         return RdioArtist(rdio_object)
     if rdio_types[rdio_object['type']] == 'album':
         return RdioAlbum(rdio_object)
+    if rdio_types[rdio_object['type']] == 'album in collection':
+        return RdioAlbum(rdio_object)
     if rdio_types[rdio_object['type']] == 'track':
         return RdioTrack(rdio_object)
     if rdio_types[rdio_object['type']] == 'playlist':
