@@ -522,6 +522,10 @@ class Api(object):
 
         """
 
+        self._oauth_consumer = None
+        self._oauth_client = None
+        self._oauth_access_token = None
+
         # Set our keys and secrets, depending on what was passed in.
         if consumer_key and consumer_secret:
             # Get our consumer object, which is just made of a key and secret
