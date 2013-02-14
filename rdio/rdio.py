@@ -935,7 +935,7 @@ class Api(object):
             'method': methods['get_object_from_short_code'],
             'short_code': short_code}
 
-        result = self.call_api_authenticated(data)
+        result = self.call_api(data)
         return derive_rdio_type_from_data(result) if result else None
 
     def get_object_from_url(self, url):
@@ -947,7 +947,7 @@ class Api(object):
 
         """
         data = {'method': methods['get_object_from_url'], 'url': url}
-        result = self.call_api_authenticated(data)
+        result = self.call_api(data)
         return derive_rdio_type_from_data(result) if result else None
 
     def get_playback_token(self, domain=None):
